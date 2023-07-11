@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ideas",
+  "info": {
+    "singularName": "idea",
+    "pluralName": "ideas",
+    "displayName": "idea",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "available": {
+      "type": "boolean"
+    },
+    "price": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "reviews": {
+      "type": "integer"
+    },
+    "profit": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "imagePath": {
+      "type": "string"
+    },
+    "presentationText": {
+      "type": "richtext"
+    },
+    "ideaId": {
+      "type": "string"
+    },
+    "header": {
+      "type": "string"
+    },
+    "ideaPublisher": {
+      "type": "string"
+    },
+    "publisherPic": {
+      "type": "string"
+    },
+    "profitText": {
+      "type": "richtext"
+    },
+    "uniqueAppText": {
+      "type": "richtext"
+    },
+    "oldPrice": {
+      "type": "string"
+    }
+  }
+}
