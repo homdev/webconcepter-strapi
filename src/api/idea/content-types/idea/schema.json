@@ -59,6 +59,9 @@
     },
     "oldPrice": {
       "type": "string"
+    },
+    "profitabilityProjection": {
+      "type": "json"
     }
   }
 }

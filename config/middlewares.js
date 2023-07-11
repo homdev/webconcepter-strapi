@@ -1,4 +1,4 @@
-module.exports = [
+module.exports = ({ env }) => ([
   'strapi::errors',
   'strapi::security',
   'strapi::cors',
@@ -9,4 +9,12 @@ module.exports = [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
-];
+  {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      headers: '*',
+      origin: ['http://localhost:1337', env("NEXT_URI", 'http://localhost:3000')]
+    }
+  },
+]);
