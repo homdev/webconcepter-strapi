@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "interests",
+  "info": {
+    "singularName": "interest",
+    "pluralName": "interests",
+    "displayName": "interest",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mail": {
+      "type": "email",
+      "pluginOptions": {}
+    },
+    "context": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "identifier": {
+      "type": "string",
+      "pluginOptions": {}
+    }
+  }
+}

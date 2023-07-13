@@ -39,9 +39,6 @@
     "presentationText": {
       "type": "richtext"
     },
-    "ideaId": {
-      "type": "string"
-    },
     "header": {
       "type": "string"
     },
@@ -62,6 +59,10 @@
     },
     "profitabilityProjection": {
       "type": "json"
+    },
+    "emailRequire": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
