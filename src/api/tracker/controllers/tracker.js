@@ -16,12 +16,33 @@ module.exports = {
         ctx.body = {success: false, message: 'invalid data format'};
         return;
       }
+
+      const {mail, context, identifier} = data.data;
+
+      const entries = await strapi.entityService.findMany('api::interest.interest', {
+        fields: ['id', 'identifiers'],
+        filters: { mail, context },
+      });
   
-      await strapi.entityService.create('api::interest.interest', data);
-        
+      if(entries.length === 0) {
+        await strapi.entityService.create('api::interest.interest', {
+          data: {
+            mail, 
+            context,
+            identifiers: [identifier]
+          }
+        });
+      } else {
+        await strapi.entityService.update('api::interest.interest', entries[0].id, {
+          data: {
+            identifiers: [...entries[0].identifiers, identifier]
+          }
+        }); 
+      }
 
       ctx.body = {success: true};
     } catch (err) {
+      console.log(err);
       ctx.badRequest("Post report controller error", { moreDetails: err });
     }
   },

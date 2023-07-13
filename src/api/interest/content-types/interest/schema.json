@@ -14,15 +14,15 @@
   "attributes": {
     "mail": {
       "type": "email",
-      "pluginOptions": {}
+      "pluginOptions": {},
+      "unique": true
     },
     "context": {
       "type": "string",
       "pluginOptions": {}
     },
-    "identifier": {
-      "type": "string",
-      "pluginOptions": {}
+    "identifiers": {
+      "type": "json"
     }
   }
 }
