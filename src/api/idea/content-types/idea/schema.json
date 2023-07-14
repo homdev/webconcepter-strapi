@@ -33,9 +33,6 @@
     "title": {
       "type": "string"
     },
-    "imagePath": {
-      "type": "string"
-    },
     "presentationText": {
       "type": "richtext"
     },
@@ -43,9 +40,6 @@
       "type": "string"
     },
     "ideaPublisher": {
-      "type": "string"
-    },
-    "publisherPic": {
       "type": "string"
     },
     "profitText": {
@@ -63,6 +57,24 @@
     "emailRequire": {
       "type": "boolean",
       "default": true
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "publisherPic": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
