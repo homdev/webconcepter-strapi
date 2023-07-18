@@ -115,3 +115,4 @@ build
 .strapi-updater.json
 pnpm-lock.yaml
 yarn.lock
+package-lock.json
