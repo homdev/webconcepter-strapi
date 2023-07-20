@@ -1,4 +1,3 @@
-# Please read the next section below before using for your own safety "variables".
 name: 🐥 ssh-action-deploy
 
 on:
@@ -9,14 +8,17 @@ on:
 
 jobs:
   build:
-    name: 🕳️ Ubuntu...
+    name: 🕳️ Deployer...
     runs-on: ubuntu-latest
     steps:
       - name: 🌈 Deploy with ssh...
-        uses: sebastianjnuwu/ssh-action-deploy@v1
+        uses: cross-the-world/ssh-pipeline@master
         with:
-          IP: ${{ secrets.IP }}
-          USER: ${{ secrets.USER }}
-          KEY: ${{ secrets.KEY }}
-          FOLDER: '/home'
-          RUN: './trigger-webconcepter-strapi-pipeline.sh'
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.USER }}
+          pass: ${{ secrets.PASS }}
+          port: 22
+          connect_timeout: 10s
+          script: |
+            cd /home
+            ./trigger-webconcepter-strapi-pipeline.sh
