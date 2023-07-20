@@ -13,8 +13,10 @@
         "@chartbrew/plugin-strapi": "^0.4.3",
         "@strapi/plugin-i18n": "4.11.1",
         "@strapi/plugin-users-permissions": "4.11.1",
+        "@strapi/provider-upload-cloudinary": "^4.11.7",
         "@strapi/strapi": "^4.11.1",
         "better-sqlite3": "8.0.1",
+        "pg": "^8.11.1",
         "zod": "^3.21.4"
     },
     "author": {

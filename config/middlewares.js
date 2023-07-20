@@ -17,6 +17,7 @@ module.exports = ({ env }) => [
       origin: [
         "http://localhost:" + env("PORT", "1337"),
         env("NEXT_URI", "http://localhost:3000"),
+        env("STRAPI_URI"),
       ],
     },
   },
