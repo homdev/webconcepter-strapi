@@ -1,0 +1,22 @@
+# Please read the next section below before using for your own safety "variables".
+name: 🐥 ssh-action-deploy
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: 🕳️ Ubuntu...
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🌈 Deploy with ssh...
+        uses: sebastianjnuwu/ssh-action-deploy@v1
+        with:
+          IP: ${{ secrets.IP }}
+          USER: ${{ secrets.USER }}
+          KEY: ${{ secrets.KEY }}
+          FOLDER: '/home'
+          RUN: './trigger-webconcepter-strapi-pipeline.sh'
